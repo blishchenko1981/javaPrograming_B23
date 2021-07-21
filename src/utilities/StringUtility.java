@@ -136,6 +136,22 @@ public class StringUtility {
 
     }
 
+    // take string and return only digits from it  "1aaa2fff345ccc" ==> "12345";
+    public static String extractNum(String s) {
+
+        for (int i = 0; i < s.length(); i++) {
+
+            int num = s.charAt(i);
+            if (num < 48 || num > 57) {
+                s = s.replace("" + s.charAt(i), "*");
+            }
+
+
+        }
+        s = s.replace("" + '*', "");
+        return s;
+
+    }
 
 
 }
