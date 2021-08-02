@@ -15,10 +15,10 @@ public class Cat {
     }
     public void drink(String drink){System.out.println("Cat " + name + " is drinking " + drink);
     }
-    public void breakThings(String thing){System.out.println("cat " + name + " has broke " + thing);
+    public void breakThings(String thing){System.out.println("cat " + name + " has broke the " + thing);
     }
     public void meow () {
-        System.out.println("cat " + name + "is meowing ");
+        System.out.println("cat " + name + " is meowing ");
     }
 
     public void setInfo (String catsName, String catsBreed, String catsGender, String catsColor, int catsAge){
