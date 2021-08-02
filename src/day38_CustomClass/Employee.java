@@ -21,7 +21,7 @@ public class Employee {
                 ", gender=" + gender +
                 ", ID=" + ID +
                 ", jobTitle='" + jobTitle + '\'' +
-                ", salary=" + salary +
+                ", salary= $" + salary +
                 '}';
     }
 }
