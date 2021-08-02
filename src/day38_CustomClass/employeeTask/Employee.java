@@ -1,4 +1,4 @@
-package day38_CustomClass;
+package day38_CustomClass.employeeTask;
 
 public class Employee {
     public String name ;

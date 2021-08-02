@@ -1,4 +1,6 @@
-package day38_CustomClass;
+package day38_CustomClass.employeeTask;
+
+import day38_CustomClass.employeeTask.Employee;
 
 import java.util.ArrayList;
 import java.util.Arrays;
