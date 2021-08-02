@@ -37,4 +37,10 @@ public class Dog {
         System.out.println("size = " + size);
         System.out.println("age = " + age);
     }
+
+
+   // public void removeNotHusky(String dog1,String dog2,String dog3,String dog4,String dog5,String dog6,String dog7,
+      //                         String dog8,String dog9,String dog10,String dog11){}
+
+
 }
