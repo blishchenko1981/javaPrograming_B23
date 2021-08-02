@@ -1,4 +1,4 @@
-package day38_CustomClass;
+package day38_CustomClass.bankAccountTask;
 
 public class BankAccount {
     public String accountHolder;
