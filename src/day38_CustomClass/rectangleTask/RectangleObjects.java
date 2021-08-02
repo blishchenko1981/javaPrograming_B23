@@ -1,4 +1,6 @@
-package day38_CustomClass;
+package day38_CustomClass.rectangleTask;
+
+import day38_CustomClass.rectangleTask.Rectangle;
 
 public class RectangleObjects {
     public static void main(String[] args) {
