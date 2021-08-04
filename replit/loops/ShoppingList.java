@@ -15,11 +15,11 @@ public class ShoppingList {
 
         for (int i = 1; i <=10 ; i++) {
 
-            System.out.println("Enter Item" + i +" and its price:");
+            System.out.println("Enter task0308.Item" + i +" and its price:");
             item = scan.next();
             price = scan.nextDouble();
             totalPrice+= price;
-            shoppingListReport += "Item"+i +": "+item + " Price: " +  price+ "";
+            shoppingListReport += "task0308.Item"+i +": "+item + " Price: " +  price+ "";
             System.out.println("Add one more item?");
             countinue = scan.next();
             if(countinue.equalsIgnoreCase("no")){
