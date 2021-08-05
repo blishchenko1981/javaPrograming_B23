@@ -1,6 +1,7 @@
 package day40_CustomClassStatic.movie;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -30,12 +31,13 @@ public class Movie {
           this.casts.addAll(casts);       }
 
     public String toString() {
+        DateTimeFormatter df= DateTimeFormatter.ofPattern("MMMM/dd/YYYY EEEE ");
         return "Movie{" +
                 "country='" + country + '\'' +
                 ", title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
                 ", director='" + director + '\'' +
-                ", releaseDate=" + releaseDate +
+                ", releaseDate=" + releaseDate.format(df) +
                 ", total number of the casts=" + casts.size() +
                 '}';
     }
