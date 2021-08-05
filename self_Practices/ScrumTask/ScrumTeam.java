@@ -38,10 +38,8 @@ public class ScrumTeam {
         return devopsList;
     }
 
-    public ArrayList removeTester (int employeeID){
-        testersList.get(testersList.indexOf(Tester.))
-   testersList.remove(Tester tester.employeeID)
-    }
+
+
 
 
 }
