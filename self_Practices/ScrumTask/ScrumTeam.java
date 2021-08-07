@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class ScrumTeam {
     public String PO, BA, SM;
-    ArrayList<Tester> testersList = new ArrayList<>();
-    ArrayList<Developer> devopsList = new ArrayList<>();
+    public ArrayList<Tester> testersList = new ArrayList<>();
+    public ArrayList<Developer> devopsList = new ArrayList<>();
     int daysOFSprint;
 
     public void setInfo (String namePO, String nameBA, String nameSM) {
@@ -15,9 +15,9 @@ public class ScrumTeam {
         this.SM = nameSM;
     }
 
-    public ArrayList<Tester> addTester(Tester tester){
-        testersList.add(tester);
-        return testersList;
+    public void  addTester(Tester tester){
+        this.testersList.add(tester);
+
     }
 
     public ArrayList<Tester> addTesters(Tester[] testers){
@@ -38,8 +38,19 @@ public class ScrumTeam {
         return devopsList;
     }
 
+    @Override
+    public String toString() {
+        return
+                "PO name: " + PO + '\'' +
+                ", BA name: " + BA + '\'' +
+                ", SM name: " + SM + '\'' +
+                ", testersList=" + testersList.size() +
+                ", devopsList=" + devopsList.size() ;
+    }
 
-
+    public void removeTester(long employeeID){
+        testersList.removeIf(p-> p.employeeID== employeeID );
+    }
 
 
 }
