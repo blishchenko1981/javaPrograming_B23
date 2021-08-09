@@ -40,8 +40,8 @@ public class Next10Days {
         ArrayList<Integer> b = new ArrayList<>();
         Integer a = 1;
         System.out.println("c- "+b.remove(a));
-        int c = 1;
-        System.out.println("a" +b.remove(c));
+        //int c = 1;
+        //System.out.println("a" +b.remove(c));
 
 
 
