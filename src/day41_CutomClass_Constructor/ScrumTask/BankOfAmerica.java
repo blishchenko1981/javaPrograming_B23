@@ -115,46 +115,51 @@ public class BankOfAmerica {
 
         //4. What is the max & min salaries of the testers
 
-        double minSalaryTesters = tester1.salary;
-        double maxSalaryTesters = tester1.salary;
+        double minSalaryTesters = scrumTeams[0].testersList.get(0).salary;
+        double maxSalaryTesters = Double.MIN_VALUE;
+        String t1 = "", t2 = "",d1 = "", d2 = "";
 
         for (ScrumTeam scrumTeam : scrumTeams) {
             for (Tester tester : scrumTeam.testersList) {
                 if (tester.salary < minSalaryTesters) {
                     minSalaryTesters = tester.salary;
+                    t1 = tester.name;
                 }
 
                 if (tester.salary > maxSalaryTesters) {
                     maxSalaryTesters = tester.salary;
+                    t2= tester.name;
                 }
             }
 
 
         }
-        System.out.println("4) max Salary for testers  = $" + maxSalaryTesters);
-        System.out.println("   min Salary for testers  = $" + minSalaryTesters);
+        System.out.println("4) max Salary for testers  = $" + maxSalaryTesters + t2);
+        System.out.println("   min Salary for testers  = $" + minSalaryTesters+ t1);
 
 
         //5. what's the max & min salaries of the developers
 
-        double maxSalaryDev = developer1.salary;
+        double maxSalaryDev = scrumTeams[0].developersList.get(0).salary;
         double minSalaryDev = developer1.salary;
 
         for (ScrumTeam scrumTeam : scrumTeams) {
             for (Developer developer : scrumTeam.developersList) {
                 if (developer.salary > maxSalaryDev) {
                     maxSalaryDev = developer.salary;
+                    d1= developer.name;
                 }
 
                 if (developer.salary < minSalaryDev) {
                     minSalaryDev = developer.salary;
+                    d2= developer.name;
                 }
             }
         }
 
 
-        System.out.println("5) min Salary for Developers = $" + minSalaryDev);
-        System.out.println("   max Salary for Developers = $" + maxSalaryDev);
+        System.out.println("5) min Salary for Developers = $" + minSalaryDev + "==>"+ d2);
+        System.out.println("   max Salary for Developers = $" + maxSalaryDev+ "==>"+ d1);
 
 
     }
