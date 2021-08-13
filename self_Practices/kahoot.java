@@ -7,7 +7,7 @@ public class kahoot {
     }
     static {
         System.out.println("Hello "+ name);
-        System.exit(0);
+
     }
 
 
