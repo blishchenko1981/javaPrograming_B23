@@ -11,6 +11,9 @@ public static boolean isLuxury = true;
         System.out.println(brand + " " + model + " is racing");
     }
 
-
-
+    @Override
+    public void start() {
+        System.out.println("BMW need call mechanic ");
+        System.out.println("Need jump start");
+    }
 }
