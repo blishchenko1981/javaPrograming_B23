@@ -2,13 +2,13 @@ package day46_Inheritance.shapeTask;
 
 public class Circle extends Shape {
 
-      private int radius, diameter;
-      private final static double PI=3.14;
+    private int radius, diameter;
+    private final static double PI = 3.14;
 
-    public Circle( int radius, int diameter) {
+    public Circle(int radius, int diameter) {
         super("Circle");
-       setRadius(radius);
-        setDiameter(radius*2);
+        setRadius(radius);
+        setDiameter(radius * 2);
     }
 
     public int getRadius() {
@@ -16,11 +16,11 @@ public class Circle extends Shape {
     }
 
     public void setRadius(int radius) {
-        if(radius<0){
+        if (radius < 0) {
             return;
         }
         this.radius = radius;
-        diameter = 2* radius;
+        diameter = 2 * radius;
     }
 
     public int getDiameter() {
@@ -28,10 +28,29 @@ public class Circle extends Shape {
     }
 
     public void setDiameter(int diameter) {
-        if(diameter<0){
+        if (diameter < 0) {
             return;
         }
         this.diameter = diameter;
-        radius = diameter/2;
+        radius = diameter / 2;
+    }
+
+    @Override
+    public double area() {
+        return radius * radius * PI;
+    }
+
+    @Override
+    public double perimeter() {
+        return diameter * PI;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                " radius= " + radius +" "+
+             super.toString()+
+                ", diameter= " + diameter +
+                '}';
     }
 }
