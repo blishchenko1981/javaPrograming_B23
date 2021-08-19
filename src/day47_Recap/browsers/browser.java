@@ -5,11 +5,11 @@ public class browser {
         System.out.println("Type: " + url);
         System.out.println("Press Enter");
     }
-    public final void close(){
+    public  void close(){
         System.out.println("Closing chrome browser");
 
     }
-    public final void open(){
+    public  void open(){
         System.out.println("Opening Chrome Browser");
     }
     public final void refresh(){

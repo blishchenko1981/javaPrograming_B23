@@ -1,6 +1,6 @@
 package day47_Recap.browsers;
 
-public class Chrome extends browser  {
+public final class Chrome extends browser  {
 
 
 }
