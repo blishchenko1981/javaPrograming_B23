@@ -139,7 +139,12 @@ public class TJMaxx {
      */
     public OnSaleItem getOnSaleItem(String name)
     {
+        for (OnSaleItem item : onSaleItems) {
+            if(item.getName().equals(name)){
+                return item;
+            }
 
+        }
 
         return null;
     }
@@ -152,8 +157,10 @@ public class TJMaxx {
      */
     public void removeItem(int catalogNumber) {
 
+        for (Item item : regularItems) {
+            if(item.getCatalogNumber()== catalogNumber){ regularItems.remove(item);  }
     }
-
+}
     /**
      * - it accepts a catalog number and finds that item
      * among regularItems and onSaleItems
