@@ -93,13 +93,18 @@ public class TJMaxx {
     public ArrayList<String> getAllItemNames() {
 
       String[] allNames = new String[regularItems.size() + onSaleItems.size()];
-        for (int i = 0; i < regularItems.size(); i++) {
-            allNames[i] = regularItems.get(i).getName();
-        }
+      int j = 0;
 
-        for (int i = regularItems.size(); i < regularItems.size() + onSaleItems.size(); i++) {
-            allNames[i] = onSaleItems.get(i).getName();
-        }
+          for (int i = 0; i < regularItems.size(); i++) {
+              allNames[j++] = regularItems.get(i).getName();
+          }
+
+
+
+          for (int i = 0; i < onSaleItems.size(); i++) {
+              allNames[j++] = onSaleItems.get(i).getName();
+          }
+
         ArrayList<String> allNamesList = new ArrayList<>();
               allNamesList.addAll(  Arrays.asList(allNames));
 
@@ -146,7 +151,7 @@ public class TJMaxx {
 
         }
 
-        return null;
+       return null;
     }
 
     /**
@@ -157,9 +162,11 @@ public class TJMaxx {
      */
     public void removeItem(int catalogNumber) {
 
-        for (Item item : regularItems) {
-            if(item.getCatalogNumber()== catalogNumber){ regularItems.remove(item);  }
-    }
+        regularItems.removeIf(p->p.getCatalogNumber()== catalogNumber);
+        onSaleItems.removeIf(p-> p.getCatalogNumber() == catalogNumber);
+
+
+
 }
     /**
      * - it accepts a catalog number and finds that item
@@ -171,7 +178,25 @@ public class TJMaxx {
      * @param catalogNumber
      */
     public void buyItem(int catalogNumber) {
+        for (Item item : regularItems) {
+            if(item.getCatalogNumber()== catalogNumber){
+                item.setQuantity(item.getQuantity()-1);
+                if(item.getQuantity()==0){
+                    regularItems.remove(item);
+                }
+            }
+        }
 
+        for (OnSaleItem item : onSaleItems) {
+            if(item.getCatalogNumber() == catalogNumber){
+                item.setQuantity(item.getQuantity()-1);
+            }
+            if(item.getQuantity() == 0){
+                onSaleItems.remove(item);
+            }
+
+
+        }
 
 
 
