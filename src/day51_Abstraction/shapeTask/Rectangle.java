@@ -1,14 +1,16 @@
 package day51_Abstraction.shapeTask;
 
 public final class Rectangle extends Shape {
-    public Rectangle(double width, double length) {
-        super("rectangle");
-        setLength(length);
-        setWidth(width);
-    }
+
 
     private double width;
     private double length;
+
+    public Rectangle(double width, double length) {
+        super("rectangle");
+        setLength(length); //this.length = length;
+        setWidth(width);
+    }
 
     public double getWidth() {
         return width;
