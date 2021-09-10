@@ -1,4 +1,4 @@
-package day_50;
+package day50;
 
 public class ObjectRec {
     public static void main(String[] args) {
