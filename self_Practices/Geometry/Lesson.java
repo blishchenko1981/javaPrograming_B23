@@ -11,6 +11,6 @@ public class Lesson {
         System.out.println("Paper.isPaper(\"paper\") = " + Paper.isPaper("paper"));
         System.out.println("rhomb.madeOF = " + rhomb.madeOF);
 
-//sfjlsdflsl
+//sfjlsdflsl try another thing
     }
 }
